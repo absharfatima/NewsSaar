@@ -12,7 +12,6 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 nltk.download('punkt')
 nltk.download('vader_lexicon')
 
-st.set_page_config(page_title='NewsSaar: A Summarised News📰 Portal', page_icon='./Meta/newspaper.ico')
 
 # Define supported languages
 SUPPORTED_LANGUAGES = {
@@ -139,8 +138,24 @@ def display_news(list_of_news, news_quantity):
 
 
 def run():
-    st.title("NewsSaar: A Summarised News📰")
+    
+    with open("style.html", "r") as f:
+        style_content = f.read()
+
+    st.markdown(style_content, unsafe_allow_html=True)
+    st.markdown(
+        """
+        <div class="animated-container">
+            <h1 class="static-title">NewsSaar</h1>
+            <div class="animated-text">Connecting You to the World's Events📰</div>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+    
+    #logo
     image = Image.open('./Meta/newsLogo.png')
+    
 
     col1, col2, col3 = st.columns([3, 5, 3])
 
