@@ -8,4 +8,3 @@ nltk
 vaderSentiment
 googletrans==4.0.0-rc1  
 Jinja2==3.1.2
-
