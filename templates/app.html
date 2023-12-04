@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>InNews🇮🇳: A Summarised News📰 Portal</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .transition-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12 text-center transition-item">
+                <img src="newspaper.png" class="img-fluid" alt="InNews Logo">
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 text-center transition-item">
+                <h1 class="mb-4">InNews🇮🇳: A Summarised News📰</h1>
+                <form action="/fetch_news" method="post">
+                    <div class="form-group">
+                        <label for="topic">Enter your Topic🔍</label>
+                        <input type="text" class="form-control" id="topic" name="topic" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Number of News:</label>
+                        <input type="number" class="form-control" id="quantity" name="quantity" min="5" max="15"
+                            value="5" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(function () {
+                document.querySelectorAll('.transition-item').forEach(function (item) {
+                    item.style.opacity = 1;
+                    item.style.transform = 'translateY(0)';
+                });
+            }, 100);
+        });
+    </script>
+</body>
+
+</html>
