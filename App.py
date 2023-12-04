@@ -152,7 +152,7 @@ def run():
 
     with col3:
         st.write("")
-    category = ['--Select--', 'Trending🔥 News', 'Favourite💙 Topics', 'Search🔍 Topic']
+    category = ['--Select--', 'Trending News 🔥', 'Favourite Topics 💙', 'Search Topic 🔍']
     cat_op = st.selectbox('Select your Category', category)
 
 
