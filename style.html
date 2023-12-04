@@ -1,0 +1,32 @@
+<!-- style.html -->
+
+<style>
+    @keyframes moveLeftToRight {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(0%);
+        }
+    }
+    .animated-container {
+        text-align: center;
+    }
+    .animated-text {
+        color: #020009;
+        font-weight: bold;
+        font-size: 35px;
+        font-style: italic;
+        margin: auto;
+        animation: moveLeftToRight 4s ease-in-out;
+    }
+    .static-title {
+        
+        color: #1E90FF; /* Green color */
+  font-size: 60px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px #333;
+    }
+</style>
